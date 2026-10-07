@@ -10,7 +10,7 @@
     <div class="container">
         <div class="form-wrapper">
             <h1>Registration Form</h1>
-            <form id="registrationForm" class="registration-form">
+            <form class="registration-form">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
                     <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
@@ -83,21 +83,5 @@
             </form>
         </div>
     </div>
-
-    <script>
-        document.getElementById('registrationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-
-            if (password !== confirmPassword) {
-                alert('Passwords do not match!');
-                return;
-            }
-
-            alert('Registration successful!');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
